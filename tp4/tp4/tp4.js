@@ -18,7 +18,7 @@ let creditosImage;
 let estado;
 let juegoComenzado = false;
 let creditosClicked = false;
-let ganador = false; // Variable para rastrear si el jugador ha ganado
+let ganador = false; 
 
 function preload() {
   pantalla1 = loadImage('data/pantalla1.png');
@@ -109,7 +109,7 @@ function draw() {
         tiempoArray.pop();
       }
 
-      // Verificar si todos los cuadrados han sido comidos
+   
       if (cuadradosComidos === cuadradosAleatorios.length) {
         ganador = true;
       }
@@ -188,7 +188,7 @@ function draw() {
     }
   }
 
-  // Mostrar el mensaje de ganador si ganó
+  
   if (ganador) {
     textSize(40);
     fill(0);
@@ -249,7 +249,7 @@ function reiniciarJuego() {
   }
   estado = 0;
   juegoComenzado = false;
-  ganador = false; // Reiniciar la variable de ganador
+  ganador = false;
   background(245);
   image(pantalla1, 0, 0, width, height);
 }
